@@ -1,0 +1,137 @@
+/* sets  font for the body */
+body{
+	font-family:  'Avenir Next', 'Open Sans', sans-serif !important;
+}
+/* formats h1*/
+header h1{
+	margin: 50px 25px;
+    margin-right: 20%;
+    text-align: center;
+}
+/* makes the navbar look nice*/
+/* format the list*/
+ul{
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	width: 55%;
+	overflow: hidden;
+}
+
+/* make the list elements float left */
+header li {
+	float: left; 
+}
+
+/* displayes the list elems normal when not hovered or active */
+li a:link, li a:visited{
+	text-transform: uppercase;
+	display: block;
+	color: grey;
+	text-align: center;
+	padding: 1px 16px;
+	text-decoration: none;
+	border: 1px solid white;
+}
+#
+/* displayes the list elems with borders when hovered or active */
+li a:hover, li a:active{
+	color: grey;
+	text-decoration: none;
+	border-left-color:grey;
+	border-right-color:grey;
+	
+}
+
+/* displayes active list elem in blue*/
+header li.active a{
+	color: #8080d8;
+}
+
+/* formats the main part of the website */
+main{
+	padding: 0px 25px 50px;
+	color: grey;
+}
+
+/* centers the text content + the map */
+main p,h2,h3,h4,table,div.graphical_content{
+	margin: auto;
+	width: 50%;
+}
+
+/* special format for h2 */
+main h2.headline{
+	padding: 20px 0 5px;
+}
+
+/* make h3 in main italic */
+main h3{
+	font-style: italic;
+}
+
+/* defines the amount of bottom padding for a paragraph */
+main p{
+	padding-bottom: 10px;
+}
+
+/* padding for the map and other potential graphical content  */
+div.graphical_content{
+	padding: 5px;
+}
+
+/* format for slideshow on homepage */
+div.carousel-inner{
+	margin-bottom: 40px;
+}
+
+/* text-format for links in main content */
+main a:link, main a:visited{
+	text-decoration: none;
+	color: grey;
+}
+
+main p a:link, main p a:visited{
+	text-decoration: none;
+	color: #8888d8;
+}
+
+main a:hover, main a:active, main p a:hover, main p a:active{
+	color: lightblue;
+}
+
+/* footer*/
+/* format for footer content */
+footer{
+	background-color: Dimgrey;
+	padding: 25px 50px;
+	color: white;
+}
+
+/* text-format for links in footer */
+footer a:link, footer a:visited{
+	text-decoration: none;
+	color: #f0f0fa;
+}
+
+footer a:hover, footer a:active{
+	color: lightblue;
+}
+
+/* sets the name of the society bold */
+name{
+	font-weight: bold;
+}
+
+/* centers (etc.) find us (bottom-line) in footer */
+.footer_find_us {
+		text-align: center;
+		font-weight: bold;
+		padding-top: 25px;
+}
+a.map{
+	float: right;
+}
+
+
+

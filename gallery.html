@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+	<!--Homepage-->
+	
+<style>
+
+/*Image grid*/
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+
+}
+
+.column img {
+    margin-top: -5px;
+    width: 100%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*sets image to fullscreen when clicked*/
+
+.row > .column {
+  padding: 0 0;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 60%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* hover and focus close button*/
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+img.hover-shadow {
+  transition: 0.3s
+}
+/* gives the image a shadow around its box*/
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+</style>
+
+<head>
+	<title>Gallery - XYZ Photographic Society</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1>XYZ Photographic Society</h1>
+		
+		<!--Navbar:-->
+		<ul>
+			<li><a href="homepage.html">Home</a></li>
+			<li class="active"><a href="gallery.html">Gallery</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="join.html">Join Us</a></li>
+			<li><a href="events.html">Events</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+			<li><a href="faqs.html">FAQs</a></li>
+		</ul>
+	</header>
+		
+<main>
+		<h2 class="headline">Gallery</h2>
+		<br>
+
+		<!-- Make images only link to the jpg files when JS is disabled -->
+	<noscript>
+		<div class = "row">
+			<div class = "column">
+				<a href="fullsizeoutput_11.jpeg"><img id = "myImg" src = "fullsizeoutput_11.jpeg" alt = "The North Sea"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_7916_1.jpg"><img id = "myImg" src = "IMG_7916_1.jpg" alt = "Street during Christmas"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_1651_2.jpg"><img id = "myImg" src = "IMG_1651_2.jpg" alt = "The River Tay"></a>
+			</div>
+			<div class="column">
+				<a href="fullsizeoutput_f.jpeg"><img id = "myImg" src = "fullsizeoutput_f.jpeg" alt = "Seagull on the Tay"></a>
+			</div>
+			<div class="column">
+			</div>
+			<div class = "column">
+				<a href="IMG_0946.jpg"><img id = "myImg" src = "IMG_0946.jpg" alt = "Trekking in the mountains"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_1539_2.jpg"><img id = "myImg" src = "IMG_1539_2.jpg" alt = "Seagull on water"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_1982.jpg"><img id = "myImg" src = "IMG_1982.JPG" alt = "Night street in Dundee"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_1958.jpg"><img id = "myImg" src = "IMG_1958.jpg" alt = "Light in the dark"></a>
+			</div>
+			<div class="column">
+			</div>
+			<div class = "column">
+				<a href="IMG_0850.jpg"><img id = "myImg" src = "IMG_0850.jpg" alt = "Mountain shelter at sunset"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_1737_2.jpg"><img id = "myImg" src = "IMG_1737_2.JPG" alt = "Bridge at sunset"></a>
+			</div>
+			<div class="column">
+				<a href="IMG_0858.jpg"><img id = "myImg" src = "IMG_0858.jpg" alt = "Sunset in the mountains"></a>
+			</div>
+			<div class="column">
+				<a href="fullsizeoutput_e.jpeg"><img id = "myImg" src = "fullsizeoutput_e.jpeg" alt = "Fireworks"></a>
+			</div>
+		</div>
+	</noscript>		
+		
+	<div class="row" id="imgs0" style="display:none;">
+		
+		<!-- displays images in gallery -->
+		<div class = "column">
+			<img onclick="openModal();currentSlide(1)" class="hover-shadow" src = "fullsizeoutput_11.jpeg" alt = "The North Sea">
+		</div>
+		<div class="column">
+			<img  onclick="openModal();currentSlide(2)" class="hover-shadow" src = "IMG_7916_1.jpg" alt = "Street during Christmas">
+		</div>
+		<div class="column">
+			<img  onclick="openModal();currentSlide(3)" class="hover-shadow" src = "IMG_1651_2.jpg" alt = "The River Tay">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(4)" class="hover-shadow" src = "fullsizeoutput_f.jpeg" alt = "Seagull on the Tay">
+		</div>
+		<div class="column">
+		</div>
+		<div class = "column">
+			<img onclick="openModal();currentSlide(5)" class="hover-shadow" src = "IMG_0946.jpg" alt = "Trekking in the mountains">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(6)" class="hover-shadow" src = "IMG_1539_2.jpg" alt = "Seagull on water">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(7)" class="hover-shadow" src = "IMG_1982.JPG" alt = "Night street in Dundee">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(8)" class="hover-shadow" src = "IMG_1958.jpg" alt = "Light in the dark">
+		</div>
+		<div class="column">
+		</div>
+		<div class = "column">
+			<img onclick="openModal();currentSlide(9)" class="hover-shadow" src = "IMG_0850.jpg" alt = "Mountain shelter at sunset">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(10)" class="hover-shadow" src = "IMG_1737_2.JPG" alt = "Bridge at sunset">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(11)" class="hover-shadow" src = "IMG_0858.jpg" alt = "Sunset in the mountains">
+		</div>
+		<div class="column">
+			<img onclick="openModal();currentSlide(12)" class="hover-shadow" src = "fullsizeoutput_e.jpeg" alt = "Fireworks">
+		</div>
+	</div>
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+			<!-- slides -->
+			<div class="mySlides">
+				<div class="numbertext">1 / 12</div>
+				<img src="fullsizeoutput_11.jpeg" style="width:100%" alt="The North Sea">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 12</div>
+				<img src="IMG_7916_1.jpg" style="width:100%" alt="Street during Christmas">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 12</div>
+				<img src="IMG_1651_2.jpg" style="width:100%" alt="The River Tay">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 12</div>
+				<img src="fullsizeoutput_f.jpeg" style="width:100%" alt="Seagull on the Tay">
+			</div>
+	
+			<div class="mySlides">
+				<div class="numbertext">5 / 12</div>
+				<img src="IMG_0946.jpg" style="width:100%" alt="Trekking in the mountains">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6 / 12</div>
+				<img src="IMG_1539_2.jpg" style="width:100%" alt="Seagull on water">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">7 / 12</div>
+				<img src="IMG_1982.JPG" style="width:100%" alt="Night street in Dundee">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">8 / 12</div>
+				<img src="IMG_1958.jpg" style="width:100%" alt="Light in the dark">
+			</div>	
+	
+			<div class="mySlides">
+				<div class="numbertext">9 / 12</div>
+				<img src="IMG_0850.jpg" style="width:100%" alt="Mountain shelter at sunset">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">10 / 12</div>
+				<img src="IMG_1737_2.JPG" style="width:100%" alt="Bridge at sunset">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">11 / 12</div>
+				<img src="IMG_0858.jpg" style="width:100%" alt="Sunset in the mountains">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">12 / 12</div>
+				<img src="fullsizeoutput_e.jpeg" style="width:100%" alt="Fireworks">
+			</div>	
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<div class="caption-container">
+				<p id="caption"></p>
+			</div>
+
+			<!-- preview in slidemode -->
+			<div class="column">
+				<img class="demo" src="fullsizeoutput_11.jpeg" onclick="currentSlide(1)" alt="The North Sea">
+			</div>
+
+			<div class="column">
+				<img class="demo" src= "IMG_7916_1.jpg" onclick="currentSlide(2)" alt="Street during Christmas">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="IMG_1651_2.jpg" onclick="currentSlide(3)" alt="The River Tay">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="fullsizeoutput_f.jpeg" onclick="currentSlide(4)" alt="Seagull on the Tay">
+			</div>
+			
+			<!-- 2. column --> 
+			<div class="column">
+				<img class="demo" src="IMG_0946.jpg" onclick="currentSlide(5)" alt="Trekking in the mountains">
+			</div>
+
+			<div class="column">
+				<img class="demo" src= "IMG_1539_2.jpg" onclick="currentSlide(6)" alt="Seagull on water">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="IMG_1982.JPG" onclick="currentSlide(7)" alt="Night street in Dundee">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="IMG_1958.jpg" onclick="currentSlide(8)" alt="Light in the dark">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="IMG_0850.jpg" onclick="currentSlide(9)" alt="Mountain shelter at sunset">
+			</div>
+		
+			<div class="column">
+				<img class="demo" src= "IMG_1737_2.JPG" onclick="currentSlide(10)" alt="Bridge at sunset">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="IMG_0858.jpg" onclick="currentSlide(11)" alt="Sunset in the mountains">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="fullsizeoutput_e.jpeg" onclick="currentSlide(12)" alt="Fireworks">
+			</div>
+		</div>
+	</div>
+
+<!-- make the slides etc. work -->
+<script>
+
+document.getElementById('imgs0').style.display = "block";
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+	
+</main>
+	
+	<footer>
+		<p>	
+		<a class="map" href="contact.html"><img src="map.png" alt="Location on map" align="right" height="175" width ="275" /></a>
+			<name>The XYZ Photographic Society </name><br>
+			Charity House <br>
+			Dundee City Council <br>
+			50 N Lindsay St <br>
+			Dundee <br>
+			DD1 1QE <br>
+			United Kingdom <br>
+			E-mail: info@ourwebsite.co.uk <br>
+			<a href="contact.html">Contact Us</a><br>
+		</p>
+		
+		<p class="footer_find_us">
+		&copy 2017 The XYZ Photographic Society | Find us on: 
+				<a href="http://www.facebook.com"><img src="facebook_logo.png" alt="facebook logo" height = "24" width = "24"/></a> 
+				<a href="http://www.instagram.com"><img src="instagram_logo.png" alt="instagram logo" height = "24" width = "24"/></a>
+				<a href="http://www.twitter.com"><img src="twitter_logo.png" alt="twitter logo" height = "24" width = "24"/></a>
+		</p>
+	</footer>
+	
+</body>
+
+</html>
